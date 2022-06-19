@@ -1,0 +1,28 @@
+https://medium.com/weyes/trabalhando-e-manipulando-sess%C3%A3o-no-php-ece2d9bf9e31
+
+if (!isset($_SESSION)) {//Verificar se a sessão não já está aberta.
+  session_start();
+}
+
+Nova maneira
+if (session_status() !== PHP_SESSION_ACTIVE) {//Verificar se a sessão não já está aberta.
+  session_start();
+}
+
+//Gravando valores dentro da sessão aberta:
+$_SESSION['nome_usuario'] = 'Yure Pereira';
+$_SESSION['nome_login'] = 'yure_pereira';
+
+//Acessando valores dentro de uma sessão:
+echo $_SESSION['nome_usuario'];
+echo $_SESSION['nome_login'];
+
+//Deletando uma sessão:
+unset($_SESSION['nome_usuario']);
+
+//Apagando todos os dados de uma sessão:
+session_unset();
+
+//Destruindo a sessão:
+session_destroy();
+
