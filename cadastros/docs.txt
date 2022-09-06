@@ -1,4 +1,4 @@
-https://medium.com/weyes/trabalhando-e-manipulando-sess%C3%A3o-no-php-ece2d9bf9e31
+
 
 if (!isset($_SESSION)) {//Verificar se a sessão não já está aberta.
   session_start();
